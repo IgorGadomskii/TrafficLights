@@ -15,12 +15,6 @@ class ViewController: UIViewController {
     
     @IBOutlet weak var changeLightButton: UIButton!
     
-    enum ChangeColor {
-        case red
-        case yellow
-        case green
-    }
-    
     override func viewDidLoad() {
         super.viewDidLoad()
         redColor.alpha = 0.3
@@ -33,7 +27,9 @@ class ViewController: UIViewController {
         greenColor.layer.cornerRadius = 50
         
     }
-
+/*
+ Был вариант решения через switch, но этот вариант мне показался проще и обходится уже существующими свойствами, без введения новых.
+ */
     @IBAction func changeTrafficLight() {
         
         if redColor.alpha == 1.0 {
